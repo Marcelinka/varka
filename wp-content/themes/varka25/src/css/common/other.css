@@ -1,0 +1,308 @@
+/* 
+	Обнуление 
+*/
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+  display: inline-block;
+}
+button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: inherit;
+  letter-spacing: inherit;
+}
+button:hover {
+  cursor: pointer;
+}
+.wpcf7-response-output,
+.ajax-loader,
+.wpcf7-not-valid-tip {
+	display: none !important;
+}
+
+/* 
+	Скрытые элементы
+*/
+.hidden {
+	display: none;
+}
+@media(--sm) {
+	.hidden_tablets {
+		display: block;
+	}
+}
+@media(--ph) {
+	.hidden_phones {
+		display: block;
+	}
+}
+.dropdown-menu_hidden {
+	display: none;
+}
+
+
+/* 
+	Убираем скролл с body, когда открывается модальное окно 
+*/
+body.scroll-locked {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 
+	Типографика 
+*/
+html {
+	font-size: 100%;
+}
+body {
+	color: var(--black);
+	font-family: 'Gotham Pro Narrow';
+	font-size: 1rem;
+	letter-spacing: .2rem;
+	line-height: 1.78;
+}
+h1 {
+	font-family: 'Gotham Pro Narrow';
+	font-size: 3.8rem;
+	line-height: 1.17;
+	letter-spacing: .2em;
+	text-transform: uppercase;
+}
+h2 {
+	font-family: 'Gotham Pro Narrow';
+	font-size: 2.2rem;
+	line-height: 1.5;
+	letter-spacing: .2em;
+	text-transform: uppercase;
+}
+h3 {
+	font-size: 1.3rem;
+	font-weight: bold;
+	line-height: 1.8;
+	letter-spacing: .2em;
+	text-transform: uppercase;
+}
+@media(--full-hd) {
+	html {
+		font-size: 85%;
+	}
+}
+@media(--ph) {
+	html {
+		font-size: 90%;
+	}
+}
+@media(--xs) {
+	h2 {
+		font-size: 1.8rem;
+	}
+}
+.text-page {
+	font-family: Roboto;
+	letter-spacing: 0;
+}
+ul,
+ol {
+	padding-left: 15px;
+}
+.aligncenter {
+	display: block;
+	margin: auto;
+}
+.alignleft {
+	float: left;
+	margin-right: 20px;
+}
+.alignright {
+	float: right;
+	margin-left: 20px;
+}
+
+/* 
+	Ограничение контента по ширине 
+*/
+.container {
+	width: 100%;
+	max-width: 2000px;
+	margin: auto;
+}
+@media(max-width: 2200px) {
+	.container {
+		max-width: 1600px;
+	}
+}
+@media(max-width: 1800px) {
+	.container {
+		padding: 0 100px;
+	}
+}
+@media(--sm) {
+	.container {
+		padding: 0 50px;
+	}
+}
+@media(--ph) {
+	.container {
+		padding: 0 40px;
+	}
+}
+@media(--ixs) {
+	.container {
+		padding: 0 20px;
+	}
+}
+
+/* 
+	Изображение в 100% 
+*/
+.all-image {
+	width: 100%;
+}
+svg {
+	width: 100%;
+	height: 100%;
+}
+
+/*
+	Контент ниже фиксированного меню
+*/
+.content {
+	margin-top: 90px;
+}
+
+/*
+	Кнопки
+*/
+.btn {
+	font-size: .8rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: var(--black);
+	padding: 1em 2.5em .85em;
+	border: 1px solid var(--black);
+	transition: all .3s;
+}
+.btn:hover {
+	background: var(--charcoal-grey);
+	color: white;
+}
+.btn_white {
+	color: white;
+	border-color: white;
+}
+.btn_white:hover,
+.btn_black:hover {
+	background: white;
+	color: var(--black);
+}
+.btn_black {
+	background-color: var(--charcoal-grey);
+	color: white;
+}
+.btn-dots {
+	font-size: .9rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+}
+.btn-dots_hidden {
+	display: none;
+}
+.btn-dots_white {
+	color: white;
+}
+.btn-dots_black {
+	color: white;
+	background: var(--charcoal-grey);
+	padding: 1em 2em;
+	justify-content: space-between;
+}
+.btn-dots__dots {
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+}
+.btn-dots_white svg,
+.btn-dots_black svg {
+	fill: white;
+}
+@media(--ph) {
+	.btn-dots_phones {
+		display: flex;
+	}
+}
+
+/*
+	Контейнер с кнопкой в правом верхнем углу
+*/
+.btn-right-corner {
+	position: relative;
+}
+.btn-right-corner .btn-dots {
+	position: absolute;
+	top: 1rem;
+	right: 0;
+}
+
+/*
+	Анимации
+*/
+@keyframes overlayReveal {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: .8;
+	}
+}
+@keyframes whiteBackground {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes modalReveal {
+	from {
+		transform: translate(0,100%);
+	}
+	to {
+		transform: translate(0,0);
+	}
+}
+@keyframes frontpage {
+	from {
+		transform: translate(0,20%);
+		opacity: 0;
+	}
+	to {
+		transform: translate(0,0);
+		opacity: 1;
+	}
+}
+.reveal {
+	animation-name: 'frontpage';
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	animation-direction: forwards;
+}
+
+/*
+	Выделение элементов форм с неправильными данными
+*/
+.wpcf7-not-valid {
+	border: 1px solid red;
+}

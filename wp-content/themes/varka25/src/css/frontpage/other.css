@@ -1,0 +1,198 @@
+/*
+	Instagram, Наша команда
+*/
+.insta-team {
+	background: var(--charcoal-grey);
+	color: white;
+	padding: 40px 0;
+}
+.insta-team-wrapper {
+	display: flex;
+}
+.instagram {
+	lost-column: 1/2;
+	padding-right: 50px;
+}
+.instagram__photos {
+	display: flex;
+	flex-wrap: wrap;
+}
+.instagram__photo {
+	lost-waffle: 1/3;
+	line-height: 0;
+}
+div.instagram__photo {
+	background: grey;
+	height: calc(35vw/3);
+}
+.instagram__photo:nth-of-type(4),
+.instagram__photo:nth-of-type(5),
+.instagram__photo:nth-of-type(6) {
+	margin-bottom: 0;
+}
+
+.instagram__photo:nth-of-type(n+7) {
+	display: none;
+}
+.team {
+	lost-column: 1/2;
+	padding-left: 50px;
+	text-align: center;
+	overflow: hidden;
+	line-height: 0;
+}
+.team__image-wrapper {
+	height: calc(100% - 95px);
+}
+.team__photo {
+	height: 100%;
+}
+.team__title {
+	text-align: center;
+}
+
+@media(--hd) {
+	.instagram {
+		padding-right: 0;
+	}
+	.team {
+		padding-left: 0;
+	}
+}
+@media(--sm) {
+	.instagram {
+		lost-column: 1/1;
+	}
+	.instagram__photo:nth-of-type(n+7) {
+		display: block;
+	}
+	.instagram__photo:nth-of-type(4),
+	.instagram__photo:nth-of-type(5),
+	.instagram__photo:nth-of-type(6) {
+		margin-bottom: 30px;
+	}
+	.team {
+		display: none;
+	}
+	div.instagram__photo {
+		height: calc(80vw/3);
+	}
+}
+@media(--ph) {
+	.instagram__title-block {
+		display: none;
+	}
+	.instagram__logo {
+		width: 270px;
+		margin: auto;
+	}
+	.instagram__logo path {
+		fill: white;
+	}
+	.instagram__button-wrapper {
+		text-align: center;
+	}
+	.instagram__button {
+		background: white;
+		color: var(--black);
+		margin-top: 20px;
+	}
+}
+@media(--xs) {
+	.instagram__photo {
+		lost-waffle: 1/2;
+	}
+	.instagram__photo:nth-of-type(n+7) {
+		display: none;
+	}
+	div.instagram__photo {
+		height: calc(75vw/2);
+	}
+}
+
+/*
+	Главная -> Категории
+*/
+.categories-block {
+	padding-top: 115px;
+	padding-bottom: 130px;
+	opacity: 0;
+}
+.categories-block__title {
+	text-align: center;
+	margin-bottom: 60px;
+}
+.categories {
+	display: flex;
+	justify-content: space-between;
+}
+.category-wrapper {
+	border: 1px solid var(--black);
+}
+.category-link {
+	width: 250px;
+	line-height: 0;
+}
+.category__image {
+	width: 100%;
+	transition: all .3s;
+}
+.category-wrapper:hover .category__image {
+	filter: brightness(110%);
+}
+.category__name {
+	/*border: 1px solid var(--black);*/
+	border-top: 1px solid var(--black);
+	padding: 20px;
+	font-weight: bold;
+	font-size: .8rem;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 1.78;
+}
+.category-wrapper:hover .category__name-border {
+	border-bottom: 1px solid var(--black);
+}
+@media(--lg) {
+	.category-link {
+		width: 200px;
+	}
+	.category__name {
+		padding: 20px 0;
+	}
+}
+@media(--hd) {
+	.categories {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.category-wrapper {
+		width: 26%;
+		margin-bottom: 40px;
+	}
+	.category-link {
+		width: 100%;
+	}
+}
+@media(--sm) {
+	.category-wrapper {
+		width: 34%;
+	}
+}
+@media(--ph) {
+	.categories-block__title {
+		text-align: center;
+	}
+	.categories-block__button {
+		display: none;
+	}
+	.category-wrapper {
+		width: 48%;
+	}
+}
+@media(--xs) {
+	.category-wrapper {
+		width: 100%;
+		max-width: 300px;
+	}
+}

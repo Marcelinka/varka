@@ -1,0 +1,142 @@
+/*
+	Последние посты на главной
+*/
+.posts-wrapper {
+	padding-top: 155px;
+	padding-bottom: 140px;
+}
+.video-advices-wrapper {
+	display: flex;
+	margin-bottom: 100px;
+	opacity: 0;
+}
+.post {
+	lost-column: 1/2;
+}
+.video>p {
+	margin: 0;
+	line-height: 0;
+}
+.video iframe {
+	width: 100%;
+}
+.video__description {
+	border: 1px solid var(--black);
+	padding: 10px 20px;
+}
+.video__title {
+	font-family: Gotham Pro Narrow;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+}
+.video__text {
+	font-family: Open Sans;
+	letter-spacing: 1px;
+	font-size: .8rem;
+	line-height: 1.78;
+}
+.advices {
+	padding-top: 52px;
+	padding-left: 90px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.advice {
+	border: 1px solid var(--black);
+	padding: 10px 30px;
+	text-align: center;
+	transition: all .3s;
+}
+.advice:hover {
+	background: var(--charcoal-grey);
+	color: white;
+}
+.article-recipe-wrapper {
+	display: flex;
+	opacity: 0;
+}
+.article {
+	padding-right: 100px;
+}
+.article__title {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+.article__name {
+	font-size: .9rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.article__image {
+	width: 100%;
+}
+.article__preview {
+	font-family: Open Sans;
+	letter-spacing: 1px;
+	margin-bottom: 50px;
+}
+.recipe {
+	padding-left: 100px;
+}
+
+@media(--lg) {
+	.advice__title {
+		font-size: 1rem;
+	}
+	.article {
+		padding-right: 30px;
+	}
+	.recipe {
+		padding-left: 30px;
+	}
+}
+@media(--md) {
+	.article__text {
+		font-size: 1.45rem;
+	}
+}
+@media(--hd) {
+	.video iframe {
+		height: 270px;
+	}
+	.advices {
+		padding-left: 30px;
+	}
+}
+@media(--ph) {
+	.video-advices-wrapper,
+	.article-recipe-wrapper {
+		flex-direction: column;
+	}
+	.post {
+		lost-column: 1/1;
+		padding: 0;
+	}
+	.video {
+		margin-bottom: 80px;
+	}
+	.advice {
+		margin-bottom: 25px;
+		background: var(--charcoal-grey);
+		color: white;
+	}
+	.article {
+		margin-bottom: 120px;
+	}
+	.article__text {
+		text-align: center;
+		font-size: 1.8rem;
+	}
+	.article__preview {
+		text-align: center;
+	}
+	.article__button-wrapper {
+		text-align: center;
+	}
+	.article__button {
+		background: var(--charcoal-grey);
+		color: white;
+	}
+}

@@ -1,0 +1,112 @@
+/*
+	Описание магазин
+*/
+.description {
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 70px;
+	padding-bottom: 150px;
+}
+.description__master {
+	width: 300px;
+	text-align: center;
+}
+.description__name {
+	margin-bottom: 5px;
+}
+.description__position {
+	font-size: 1.1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.description__text {
+	width: 500px;
+}
+.description__details {
+	font-family: Open Sans;
+	letter-spacing: 1px;
+	margin-bottom: 50px;
+}
+.description__address {
+	margin-bottom: 30px;
+}
+.description__button {
+	margin-bottom: 0;
+}
+@media(--hd) {
+	.description {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+}
+@media(--sm) {
+	.description {
+		flex-direction: column;
+		align-items: center;
+	}
+	.description__master {
+		width: 100%;
+		max-width: 300px
+	}
+	.description__text {
+		width: 100%;
+		max-width: 500px;
+		text-align: center;
+		margin-top: 50px;
+	}
+}
+@media(--ph) {
+	.description {
+		flex-direction: column-reverse;
+	}
+	.description__text {
+		margin-top: 0;
+	}
+	.description__address {
+		display: none;
+	}
+	.description__address-phones {
+		margin-top: 90px;
+		font-weight: bold;
+		font-size: 1.3rem;
+		text-transform: uppercase;
+		text-align: center;
+	}
+}
+
+/*
+	Фотогалерея
+*/
+.photogallery {
+	display: flex;
+	flex-wrap: wrap;
+}
+.photogallery__item {
+	lost-waffle: 1/2;
+}
+
+@media(--ph) {
+	.photogallery {
+		display: none;
+	}
+}
+
+/*
+	Наша команда
+*/
+.shop-team {
+	padding-top: 100px;
+	line-height: 0;
+}
+.shop-team__title {
+	text-align: center;
+}
+@media(--ph) {
+	.shop-team {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

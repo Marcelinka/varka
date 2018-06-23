@@ -1,0 +1,30 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+.container {
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+th,
+td {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+ #start-convert {
+     margin-top: 1rem;
+     margin-bottom: 2rem;
+ }
+
+ #converting-results {
+     margin-top: 1rem;
+     margin-bottom: 2rem;
+ }

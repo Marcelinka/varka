@@ -1,0 +1,202 @@
+/*
+	Каталог -> Шапка
+*/
+.catalog__breadcrumb {
+	padding-top: 20px;
+}
+.woocommerce-breadcrumb {
+	font-size: .9rem;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.woocommerce-breadcrumb a {
+	border-bottom: 1px solid transparent;
+	color: var(--greyish);
+}
+.woocommerce-breadcrumb a:hover {
+	border-color: var(--greyish);
+}
+.catalog__header {
+	padding-top: 50px;
+	padding-bottom: 100px;
+}
+.catalog__title {
+	text-align: center;
+	margin-bottom: 50px;
+}
+.catalog__categories {
+	display: flex;
+	justify-content: space-between;
+}
+.catalog__category {
+	width: 19%;
+	padding: 20px 0 18px;
+	border: 1px solid var(--black);
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: .9rem;
+	text-align: center;
+	transition: all .3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.catalog__category_active {
+	background: var(--charcoal-grey);
+	color: white;
+}
+.catalog__category:hover {
+	background: var(--charcoal-grey);
+	color: white;
+}
+@media(--hd) {
+	.catalog__category {
+		padding-left: 31px;
+		padding-right: 31px;
+	}
+}
+@media(--ph) {
+	.catalog__categories {
+		display: none;
+	}
+}
+
+/*
+	Каталог -> Сайдбар
+*/
+.sidebar-content-wrapper {
+	display: flex;
+}
+.sidebar {
+	width: 300px;
+	margin-right: 50px;
+	margin-bottom: 100px;
+}
+.sidebar__item {
+	border: 1px solid var(--black);
+	border-top: none;
+	padding-bottom: 20px;
+}
+.sidebar__item:first-child:not(.sidebar__item_washing) {
+	border-bottom: none;
+}
+.sidebar__title {
+	font-size: 1.6rem;
+	padding: 10px 20px;
+	margin: 0 0 30px;
+	background: var(--charcoal-grey);
+	color: white;
+}
+.sidebar__title_filters {
+	margin: 0;
+	border: 1px solid var(--black);
+}
+.sidebar__part {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0 20px;
+}
+.sidebar__link {
+	font-size: .9rem;
+	line-height: 1.3;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-bottom: 1px solid transparent;
+	margin-bottom: 10px;
+}
+.sidebar__link:hover {
+	border-color: var(--black);
+}
+.widget_berocket_aapf {
+	background: white;
+    color: var(--black);
+    padding: 20px;
+    border: 1px solid var(--black);
+    border-top: none;
+}
+.berocket_aapf_widget-title {
+	margin: 0 0 20px;
+	font-family: Gotham Pro Narrow;
+	font-weight: bold;
+	font-size: .9rem;
+}
+ul.berocket_aapf_widget {
+	margin: 0;
+	padding: 0;
+}
+ul.berocket_aapf_widget li {
+	font-family: Gotham Pro Narrow;
+	font-weight: normal;
+	font-size: .9rem;
+	text-transform: uppercase;
+	padding: 3px 0;
+}
+.berocket_aapf_widget input[type="checkbox"] + label:before {
+	background: white;
+	border: 1px solid black;
+	width: 12px;
+	height: 12px;
+	display: block;
+    float: left;
+    margin-right: 10px;
+}
+.berocket_aapf_widget input[type="checkbox"]:checked + label:before {
+	background: url('img/check-symbol.png') white no-repeat center;
+	background-size: 10px 10px;
+}
+.berocket_checked {
+	color: var(--greyish);
+}
+ul.berocket_aapf_widget li > span {
+	cursor: default;
+}
+ul.berocket_aapf_widget li > span:hover {
+	color: white;
+}
+.berocket_label_widgets {
+	cursor: pointer;
+	transition: all .3s ease;
+}
+.berocket_label_widgets:hover {
+	color: var(--greyish);
+}
+.berocket_aapf_widget li.slider span.left input, 
+.berocket_aapf_widget li.slider span.right input {
+	background: transparent;
+	color: var(--charcoal-grey);
+	font-weight: bold;
+	font-size: 1.6rem;
+	font-style: normal;
+	padding: 0;
+	width: 100%;
+	border: none;
+}
+.berocket_aapf_widget li.slider span.left input {
+	text-align: left;
+}
+.berocket_filter_price_slider.ui-widget-content .ui-slider-handle {
+	background: var(--charcoal-grey);
+	border-radius: 50%;
+}
+.berocket_filter_price_slider.ui-widget-content .ui-slider-range {
+	background: rgb(166,152,118);
+}
+@media(--sm) {
+	.sidebar_tablets {
+		position: fixed;
+		width: 300px;
+		margin-right: 0;
+		max-height: calc(100%-90px);
+		overflow: auto;
+		top: 90px;
+		left: 0;
+		transition: all .4s ease-out;
+		z-index: 1;
+		background: white;
+		margin-bottom: 0;
+	}
+	.sidebar_tablets_hidden {
+		left: -300px;
+	}
+}
